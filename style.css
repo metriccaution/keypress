@@ -1,0 +1,41 @@
+#keypressTarget {
+    height: 100%;
+    width: 70%;
+    background-color: chartreuse;
+    float: left;
+    margin: 0em;
+    border: 0em;
+    padding: 0em;
+}
+
+#right {
+  height: 100%;
+  width: 30%;
+  float:right;
+  margin: 0em;
+  border: 0em;
+  padding: 0em;
+}
+
+#eventToggle {
+  width: 100%;
+  height: 10%;
+  background-color: red;
+  margin: 0em;
+  border: 0em;
+  padding: 0em;
+}
+
+#eventToggle > label {
+  margin-left: 1em;
+}
+
+#keyDisplay {
+  height: 90%;
+  width: 100%;
+  overflow-y: scroll;
+  margin: 0em;
+  border: 0em;
+  padding: 0em;
+  background-color: blue;
+}
