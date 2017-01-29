@@ -77,14 +77,35 @@
   charMap.singleValue(34,  'Page Down');
   charMap.singleValue(35,  'End');
   charMap.singleValue(36,  'Home');
+  charMap.singleValue(45,  'Insert');
+  charMap.singleValue(46,  'Delete');
+  charMap.singleValue(59,  ';');
+  charMap.singleValue(61,  '=');
+  charMap.singleValue(106, 'Numpad *');
+  charMap.singleValue(107, 'Numpad +');
+  charMap.singleValue(109, 'Numpad -');
+  charMap.singleValue(110, 'Numpad .');
+  charMap.singleValue(111, 'Numpad /');
   charMap.singleValue(144, 'Num Lock');
+  charMap.singleValue(163, '#');
+  charMap.singleValue(173, '-');
+  charMap.singleValue(188, ',');
+  charMap.singleValue(190, '.');
+  charMap.singleValue(191, '/');
   charMap.singleValue(192, '`');
+  charMap.singleValue(219, '[');
+  charMap.singleValue(220, '\\');
+  charMap.singleValue(221, ']');
+  charMap.singleValue(222, '\'');
   charMap.singleValue(225, 'Right alt');
 
   charMap.addRange(48, 57, String.fromCharCode); // Number row
   charMap.addRange(65, 90, String.fromCharCode); // Letters
   charMap.addRange(96, 105, function(c) { // Numpad numbers
     return 'Numpad ' + (c - 96);
+  });
+  charMap.addRange(112, 123, function(c) { // Function keys
+    return 'F' + (c - 111);
   });
 
   function renderKeys (events, element, allowedTypes) {
