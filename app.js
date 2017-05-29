@@ -154,12 +154,12 @@
     return selected;
   };
 
-  function eventListener(type) {
+  function eventListener(type, defaultValue) {
 
     var filterCheckbox = document.createElement('input');
     filterCheckbox.setAttribute('type', 'checkbox');
     filterCheckbox.setAttribute('value', type);
-    filterCheckbox.checked = true;
+    filterCheckbox.checked = defaultValue;
     filterCheckbox.addEventListener('change', function() {
       renderKeys(store.get(), keypressDisplay, filterTypes(filterList));
     });
@@ -177,6 +177,6 @@
     };
   };
 
-  keypressTarget.addEventListener('keydown', eventListener('keydown'));
-  keypressTarget.addEventListener('keyup', eventListener('keyup'));
+  keypressTarget.addEventListener('keydown', eventListener('keydown', true));
+  keypressTarget.addEventListener('keyup', eventListener('keyup', false));
 })();
